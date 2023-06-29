@@ -6,6 +6,6 @@ Note the gauge template has been competely taken from [bernii's repo](https://gi
 
 
 
-# Useful links
+## Useful links
 
 https://github.com/bernii/gauge.js/wiki/How-to-Display-the-Value-of-the-Gauge-in-Text
