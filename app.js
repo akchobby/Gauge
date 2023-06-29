@@ -21,9 +21,9 @@ var opts = {
   };
 var target = document.getElementById('foo'); // your canvas element
 var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-gauge.setTextField(document.getElementById("gauge-text"),2);
-gauge.maxValue = 3000; // set max gauge value
+gauge.setTextField(document.getElementById("gauge-text"),2, " &#8451;");
+gauge.maxValue = 150; // set max gauge value
 gauge.setMinValue(0);  // set min value
-gauge.set(2300); // set actual value
+gauge.set(120); // set actual value
 
 

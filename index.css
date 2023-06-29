@@ -9,6 +9,7 @@ canvas {
 span {
     display: table;
     margin: 0 auto;
-    font-family: Haettenschweiler;
     font-size: 30;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }

@@ -165,8 +165,8 @@
 
     BaseGauge.prototype.forceUpdate = true;
 
-    BaseGauge.prototype.setTextField = function(textField, fractionDigits) {
-      return this.textField = textField instanceof TextRenderer ? textField : new TextRenderer(textField, fractionDigits);
+    BaseGauge.prototype.setTextField = function(textField, fractionDigits, txt) {
+      return this.textField = textField instanceof TextRenderer ? textField : new TextRenderer(textField, fractionDigits, txt);
     };
 
     BaseGauge.prototype.setMinValue = function(minValue, updateStartValue) {
@@ -239,13 +239,14 @@
   })(ValueUpdater);
 
   TextRenderer = (function() {
-    function TextRenderer(el, fractionDigits1) {
+    function TextRenderer(el, fractionDigits1, txt) {
       this.el = el;
       this.fractionDigits = fractionDigits1;
+      this.txt = txt;
     }
 
     TextRenderer.prototype.render = function(gauge) {
-      return this.el.innerHTML = formatNumber(gauge.displayedValue, this.fractionDigits);
+      return this.el.innerHTML = formatNumber(gauge.displayedValue, this.fractionDigits) + this.txt;
     };
 
     return TextRenderer;
