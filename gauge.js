@@ -242,6 +242,9 @@
     function TextRenderer(el, fractionDigits1, txt) {
       this.el = el;
       this.fractionDigits = fractionDigits1;
+      if(txt == null){
+        txt=""
+      }
       this.txt = txt;
     }
 
